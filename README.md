@@ -68,7 +68,7 @@ Este documento describe cómo configurar un nuevo dominio para un sitio web en N
      ```plaintext
      192.168.56.10 jenny
      ```
-   - Accede a `http://jenny` desde un navegador para verificar el funcionamiento.
+   - Accede a `http://jenny` para verificar el funcionamiento.
 ---
 ## CUESTIONES FINALES
 
