@@ -16,11 +16,7 @@ Vagrant.configure("2") do |config|
     # Instalar Nginx
     apt-get install -y nginx
 
-    # Configuración de Nginx: mover archivos
-    sudo mv /home/vagrant/hosts /etc/hosts
-    sudo mv /home/vagrant/jenny /etc/nginx/sites-available/jenny
-    sudo mv /home/vagrant/config /etc/vsftpd.conf
-    
+     
     # Habilitar el sitio de Nginx
     sudo ln -s /etc/nginx/sites-available/jenny /etc/nginx/sites-enabled/
     
