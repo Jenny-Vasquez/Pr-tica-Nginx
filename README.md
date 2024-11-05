@@ -69,6 +69,61 @@ Este documento describe cómo configurar un nuevo dominio para un sitio web en N
      192.168.56.10 jenny
      ```
    - Accede a `http://jenny` para verificar el funcionamiento.
+
+
+### Paso 2: Configuración de FTPS
+
+1. **Instalar el Servidor FTP (vsftpd)**
+
+   Ejecuta el siguiente comando para instalar `vsftpd`:
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y vsftpd
+   ```
+
+2. **Configurar el Servidor FTPS**
+
+   Abre el archivo de configuración de `vsftpd` con un editor de texto:
+
+   ```bash
+   sudo nano /etc/vsftpd.conf
+   ```
+
+ 
+
+ ```bash
+rsa_cert_file=/etc/ssl/certs/vsftpd.crt
+rsa_private_key_file=/etc/ssl/private/vsftpd.key
+ssl_enable=YES
+allow_anon_ssl=NO
+force_local_data_ssl=YES
+force_local_logins_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+require_ssl_reuse=NO
+ssl_ciphers=HIGH
+local_root=/home/jenny/ftp
+ ```
+
+
+3. **Generar Certificados SSL**
+
+   Si no tienes certificados SSL, puedes generarlos usando OpenSSL. Ejecuta:
+
+   ```bash
+   sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt    ```
+
+   Esto generará un nuevo certificado SSL y una clave privada.
+
+4. **Reiniciar el Servidor vsftpd**
+
+   Después de realizar las configuraciones necesarias, reinicia el servicio `vsftpd` para aplicar los cambios:
+
+   ```bash
+   sudo systemctl restart vsftpd
+   ```
 ---
 ## CUESTIONES FINALES
 
@@ -77,4 +132,8 @@ Este documento describe cómo configurar un nuevo dominio para un sitio web en N
 
 - **¿Qué pasa si no le doy los permisos adecuados a `/var/www/nombre_web`?**
   - Si los permisos no son correctos, Apache puede tener problemas para acceder y servir los archivos del sitio, resultando en errores de acceso como el 403 "Forbidden", que indica que el servidor no tiene permiso para acceder a esos archivos.
+
+## IMAGENES DE LA CONFIGURACIÓN
+[Imagen1](imagenes/imagen1.PNG)
+[Imagen2](imagenes/imagen3.PNG)
 
