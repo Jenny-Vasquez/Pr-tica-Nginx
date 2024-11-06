@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     sudo chmod -R 755 /var/www/jenny
 
     # Generar certificados SSL para FTPS
-    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt -subj "/CN=localhost"
+    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt
 
     # Verificar configuración de Nginx y reiniciar servicios
     sudo nginx -t && sudo systemctl restart nginx
