@@ -144,4 +144,7 @@ local_root=/home/jenny/ftp
 ![Imagen2](imagenes/8.PNG)
 ![Imagen2](imagenes/9.PNG)
 ![Imagen2](imagenes/10.PNG)
-![Imagen2](imagenes/11.PNG)
+![Imagen2](imagenes/11.png)
+
+**Autor**
+Desarrollado por Jenny P. Vásquez.
