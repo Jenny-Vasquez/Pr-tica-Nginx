@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
   sudo cp /vagrant/provision/host.conf /etc/hosts
   # Crear enlace simbólico en sites-enabled
   sudo ln -s /etc/nginx/sites-available/jenny /etc/nginx/sites-enabled/
-  # Configurar permisos
+  # Establecemos www-data en el mismo grupo de jenny, para que cuando metamos archivos
   sudo usermod -aG jenny www-data
    # Ajustamos permisos en la carpeta de inicio del usuario
   sudo chown -R www-data:www-data /var/www/jenny
