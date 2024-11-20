@@ -134,6 +134,17 @@ local_root=/home/jenny/ftp
   - Si los permisos no son correctos, Apache puede tener problemas para acceder y servir los archivos del sitio, resultando en errores de acceso como el 403 "Forbidden", que indica que el servidor no tiene permiso para acceder a esos archivos.
 
 ## IMAGENES DE LA CONFIGURACIÓN
-![Imagen1](imagenes/imagen1.PNG)
-![Imagen2](imagenes/imagen3.PNG)
+![Imagen1](imagenes/1.PNG)
+![Imagen2](imagenes/2.PNG)
+![Imagen2](imagenes/3.PNG)
+![Imagen2](imagenes/4.PNG)
+![Imagen2](imagenes/5.PNG)
+![Imagen2](imagenes/6.PNG)
+![Imagen2](imagenes/7.PNG)
+![Imagen2](imagenes/8.PNG)
+![Imagen2](imagenes/9.PNG)
+![Imagen2](imagenes/10.PNG)
+![Imagen2](imagenes/11.png)
 
+**Autor**
+Desarrollado por Jenny P. Vásquez.
